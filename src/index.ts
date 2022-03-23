@@ -5,6 +5,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3000
 
+app.use(express.json())
+
 app.get('/', ( req, res ) => { res.send( 'home page' ) })
 app.use('/address', addressRouter)
 app.use('/transfer', transferRouter)
